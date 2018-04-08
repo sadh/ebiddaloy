@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+{% load humanize %}
+{% block breadcrumb %}
+        <li class="breadcrumb-item active">Admin Dashboard</li>
+{% endblock %}
+{% block content%}
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10 col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">
+                        Employ Teacher
+                    </h3>
+                    <a href="{% url 'edit_post' post.topic.board.pk post.topic.pk post.pk %}" class="btn btn-primary">Employ Teacher</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">
+                        Enroll Student
+                    </h3>
+                    <a href="{% url 'edit_post' post.topic.board.pk post.topic.pk post.pk %}" class="btn btn-primary">Enroll Student</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
